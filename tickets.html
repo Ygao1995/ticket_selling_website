@@ -1,0 +1,252 @@
+
+<html>
+	<script type="text/JavaScript" src="js/pictures.js"></script>
+	<script type="text/JavaScript" src="js/Checkoutpage.js"></script>
+	<link href="css/style_sum.css" type="text/css" rel="stylesheet" />	
+	<link href="css/style.css" type="text/css" rel="stylesheet" />	
+	<script type="text/JavaScript" src="js/sign.js"></script>
+	<script type="text/JavaScript" src="js/Timeout.js"></script>
+	<!--
+	<link href="css/css3.css" rel="stylesheet" type="text/css" media="all">
+	-->
+
+	<style>
+		/* signin page*/
+	.hide{
+		display: none;
+	}
+	.c2{            
+    	background-color: rgba(0, 0, 0, 0.8);
+    	position: fixed;
+    	width: 400px;
+    	height: 300px;
+    	top:50%;
+    	left: 50%;
+    	z-index: 99999;
+    	margin-top: -150px;
+    	margin-left: -200px;
+    	text-align: center;
+    	vertical-align: middle;
+    	border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+	}
+
+	</style>
+
+	<head>
+		<title>Welcome Valentine Movie</title>
+	</head>
+	<body>
+		<!-- Signin page, initially hide -->
+		<div id="modal" class="c2 hide" style="padding-top:110px; ">
+			<form name="signinform" method="post" action="checkaccount.php">
+    		<p><font color="white">Username:</font><input type="text" name="username"/></p>
+    		<p><font color="white">Password:</font><input type="password" name="password"/></p>
+    		<br>
+    		<p><font color="red" =>If you don't have account, please create one</font></p>
+			<p><input type="submit" value="Submit">
+				<input type="button" value="Create" onclick="create();">
+    			<input type="button" value="Cancel" onclick="Hide();">
+			</p>
+			</form>
+    	</div>
+
+
+		<div class="header-all2" id="home">
+			<!-- Head-top -->
+			<div class="header-top" style="background:url(images/head-top2.jpg)">
+				<div class="header-title">
+					<div class="brand" style="background-color: lightgrey；opacity:0.1">
+						<h1>
+							<a href="index.html"><font color="red">Valentine Movie</font></a>
+						</h1>
+					</div>
+					<div class="phone" style="background-color: lightgrey；opacity:0.1">
+						<h4><font color="black">Call: 202-856-5725 </font></h4>
+						<h4><input type="button" onclick="Show()" value="Join us --->>"></h4>
+					</div>
+				</div>
+				<!--menu-->
+				<div id="nav-design" style="background-color: grey" align="center" >
+					<ul>
+						<li><a href="index.html"> HOME </a></li>
+						<li><a href="tickets.html"> TICKETS </a></li>
+						<li><a href="index.html"> FOOD & DRINKs </a>
+							<ul>
+								<li><a href="index.html"> Full service </a></li>
+								<li><a href="index.html"> Coke </a></li>
+								<li><a href="index.html"> Beers</a></li>
+								<li><a href="index.html"> Snacks </a></li>
+								<li><a href="index.html"> Cakes </a></li>
+								<li><a href="index.html"> Mcdonald's </a></li>
+							</ul>
+						</li>
+						<li><a href="index.html"> OUR CLUB </a>
+							<ul>
+								<li><a href="index.html"> Introduction </a></li>
+								<li><a href="index.html"> Team Members </a></li>
+								<li><a href="index.html"> Join us </a></li>
+								<li><a href="index.html"> Other Events </a></li>
+								<!--<li><a href="index.html">  </a></li>
+								<li><a href="index.html"> adasdas </a></li>-->
+							</ul>
+						</li>
+						<li><a href="https://carey.jhu.edu/"> CAREY </a>
+							<ul>
+								<li><a href="https://carey.jhu.edu/about/"> About </a></li>
+								<li><a href="https://carey.jhu.edu/programs/"> Programs </a></li>
+								<li><a href="https://carey.jhu.edu/faculty-research/"> Faculty </a></li>
+								<li><a href="https://carey.jhu.edu/current-students/"> Students </a></li>
+								<li><a href="https://carey.jhu.edu/alumni-friends/"> Alumni </a></li>
+								<li><a href="https://carey.jhu.edu/employers/"> Employers </a></li>
+								
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+			<!-- head-pictures
+			<div id="head-pic2">
+				<img id="head_img" src="images/01.jpg">
+				<div id="dots_div">
+					<li id="dot1" onmouseover="myChangePic(1)"></li>
+					<li id="dot2" onmouseover="myChangePic(2)"></li>
+					<li id="dot3" onmouseover="myChangePic(3)"></li>
+					<li id="dot4" onmouseover="myChangePic(4)"></li>
+				</div>
+			</div>
+			
+			-->
+		</div>
+		
+		
+		<!-- Checkout part -->
+		<form name="tickets" action="insert_user.php" method='post'>
+			<div class="cart">
+            	<ul>
+            		<li>Student $6.99</br>
+            		<input type="button" name="minus" value="-" onclick="minusStu()">
+            		<strong name="amount1" id="stuamt">0</strong>
+            		<input type="button" name="plus" value="+" onclick="plusStu()">
+            		$<strong name="price1" id="stuprice">0.00</strong>
+            		</li>
+       			</ul>
+       			<ul>
+       				<li>NonStudent $9.99</br>
+            		<input type="button" name="minus" value="-" onclick="minusNon()">
+            		<strong name="amount2" id="nonamt">0</strong>
+            		<input type="button" name="plus" value="+" onclick="plusNon()">
+            		$<strong name="price2" id="nonprice">0.00</strong>
+       				</li>
+       			</ul>
+       			<input type="hidden" id="getamount" name="insert1">
+       			<p>The movie you choose:
+				<select size="1" name="movie">
+					<option value="">Select one from the following</option>
+					<option value="lego2">The Lego Movie 2: The Second Part</option>
+					<option value="wandering2">Wandering Earth</option>
+					<option value="peppa2">Peppa Celebrates Chinese New Year</option>
+					<option value="titanic2">Titanic (1997)</option>					
+				</select>
+				</p>
+       		</div>
+       		<div class="instruction">
+				<p><i>Age Restriction Notice:</i> Children under 6 are not allowed at R-rated movies.</p>
+				<p>For orders containing more than 10 of single ticket type, please use multiple accounts.</p>
+				<p>Please bring your ID when picking up tickets.</p>
+				<p>No food allowed.</p>
+			</div>
+			<div class="personalinfo">
+				<p>Please enter your name: (at most 15 characters)<input type="text" name="username" size="15" maxlength="15"/></p>
+				<p>Please enter your phone number: <input type="text" name="phone" size="10" maxlength="10"/></p>
+			</div>
+       		<div class="checkout">
+       			<p>Total: $
+       			<strong name="totalprice" id="totalPrice">0.00</strong>
+				<input type="submit" class="btn subscrib-btnn" value="Checkout" name="checkoutbutton" onclick="Checkout()">
+				<input type="hidden" id="getprice" name="insert2">
+				</p>
+			</div>
+		</from>
+	<!--subscribe-->
+	<section class="subscribe py-lg-4 py-md-3 py-sm-3 py-3">
+    	<div class="container py-lg-5 py-md-5 py-sm-4 py-4">
+			<h3 class="title clr text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3" style="font-size: 66px; color: white;" >Subscribe Us</h3>
+		 	<div class="row subscribe-form text-center">
+            	<div class="col-md-6 email-sub-agile">
+			  		<form action="#" method="post" name="emailsubmit">
+                  		<div class="form-group ">
+                     		<input name="emailinput" type="email" class="form-control email-sub-agile" placeholder="Email" style="height:30px;" size="40">
+                  		</div>
+                  		<div class="text-center">
+                     		<button type="submit" class="btn subscrib-btnn" onclick="suscribe()">Submit</button>
+                  		</div>
+				  	</form>
+               	</div>		
+			</div>
+		</div>		
+	</section >
+	
+    <section class="buttom-footer py-lg-4 py-md-3 py-sm-3 py-3">
+    	<div class="container py-lg-5 py-md-5 py-sm-4 py-4" style="background-color:dark;">
+        	<div class="row footer-agile-grids text-center" style="background-color:dark;">
+               <div class="col-lg-4 col-md-4 col-sm-12 wthree-left-right" style="width:30%; float: left;">
+                  <h4 style="color:black;">About</h4>
+                  <div class="abt-footer">
+                     <p style="color:black;"> Watch Your Favourite Movies In Valentine Movie </p>                    
+                  </div>				  
+               </div>
+               <div class="col-lg-4 col-md-4 col-sm-12 wthree-left-right" style="width:40%; float:left;">
+                  <h4 style="color:black;"> Movies Hour</h4>
+                  <div class="wls-hours-list">
+                     <ul>
+                        <li class="d-flex"> <a href="#lego"> The Lego Movie 2:The Second </a>  <span class="time ml-auto"> 9:30-11:17</span></li>
+                        <li class="d-flex"> <a href="#earth">Wandering Earth  </a><span class="time ml-auto"> 12:00-14:55</span></li>
+                        <li class="d-flex"><a href="#peggi">Peppa: Chinese New Year</a><span class="time ml-auto"> 15:30-16:51</span></li>
+                        <li class="d-flex"><a href="#titanic">Titanic (1997) </a><span class="time ml-auto"> 17:30-20:45</span></li>
+                        
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-4 col-sm-12 wthree-left-right" style="width:30%; float:left;">
+                  <h4 style="color:black;">Nav Links</h4>
+                  <nav class="border-line">
+                     <ul class="nav flex-column">
+                        <li class="nav-item active">
+                           <a class="nav-link" href="index.html" >Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                           <a href="tickets.html" class="nav-link ">TICKETS</a>
+                        </li>
+                        <li class="nav-item">
+                           <a href="index.html" class="nav-link">FOOD & DRINKs</a>
+                        </li>
+						<li class="nav-item">
+                           <a href="index.html" class="nav-link ">Blog</a>
+                        </li>
+                       
+                     </ul>
+                  </nav>
+               </div>
+            </div>
+         </div>
+      </section>
+	  
+      <footer style="margin:30% 0 0 0" class="text-center">
+         <p>©2019 Valentine Movie. All Rights Reserved 
+      </footer>
+	
+	
+	
+	
+	
+	
+	
+	</body>
+
+
+
+</html>

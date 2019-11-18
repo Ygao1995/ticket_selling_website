@@ -1,0 +1,313 @@
+<html>
+	<script type="text/JavaScript" src="js/pictures.js"></script>
+	<script type="text/JavaScript" src="js/sign.js"></script>
+	<link href="css/style_sum.css" type="text/css" rel="stylesheet" />
+
+	<style>
+		/* signin page*/
+	.hide{
+		display: none;
+	}
+	.c2{            
+    	background-color: rgba(0, 0, 0, 0.8);
+    	position: fixed;
+    	width: 400px;
+    	height: 300px;
+    	top:50%;
+    	left: 50%;
+    	z-index: 99999;
+    	margin-top: -150px;
+    	margin-left: -200px;
+    	text-align: center;
+    	vertical-align: middle;
+    	border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+	}
+
+	</style>
+
+	<head>
+		<title>Welcome Valentine Movie</title>
+	</head>
+	<body>
+		<!-- Signin page, initially hide -->
+		<div id="modal" class="c2 hide" style="padding-top:110px; ">
+			<form name="signinform" method="post" action="checkaccount.php">
+    		<p><font color="white">Username:</font><input type="text" name="username"/></p>
+    		<p><font color="white">Password:</font><input type="password" name="password"/></p>
+    		<br>
+    		<p><font color="red" =>If you don't have account, please create one</font></p>
+			<p><input type="submit" value="Submit">
+				<input type="button" value="Create" onclick="create();">
+    			<input type="button" value="Cancel" onclick="Hide();">
+			</p>
+			</form>
+    	</div>
+    	
+
+		<div class="header-all" id="home">
+			<!-- Head-top -->
+			<div class="header-top" style="background:url(images/head-top2.jpg)">
+				<div class="header-title">
+					<div class="brand" style="background-color: lightgrey；opacity:0.1">
+						<h1>
+							<a href="index.html"><font color="red">Valentine Movie</font></a>
+						</h1>
+					</div>
+					<div class="phone" style="background-color: lightgrey；opacity:0.1">
+						<h4><font color="black">Call: 202-856-5725 </font></h4>
+						<h4><input type="button" onclick="Show()" value="Join us --->>"></h4>
+					</div>
+				</div>
+				<!--menu-->
+				<div id="nav-design" style="background-color: grey" align="center" >
+					<ul>
+						<li><a href="index.html"> HOME </a></li>
+						<li><a href="tickets.html"> TICKETS </a></li>
+						<li><a href="index.html"> FOOD & DRINKs </a>
+							<ul>
+								<li><a href="index.html"> Full service </a></li>
+								<li><a href="index.html"> Coke </a></li>
+								<li><a href="index.html"> Beers</a></li>
+								<li><a href="index.html"> Snacks </a></li>
+								<li><a href="index.html"> Cakes </a></li>
+								<li><a href="index.html"> Mcdonald's </a></li>
+							</ul>
+						</li>
+						<li><a href="index.html"> OUR CLUB </a>
+							<ul>
+								<li><a href="index.html"> Introduction </a></li>
+								<li><a href="index.html"> Team Members </a></li>
+								<li><a href="index.html"> Join us </a></li>
+								<li><a href="index.html"> Other Events </a></li>
+								<!--<li><a href="index.html">  </a></li>
+								<li><a href="index.html"> adasdas </a></li>-->
+							</ul>
+						</li>
+						<li><a href="https://carey.jhu.edu/"> CAREY </a>
+							<ul>
+								<li><a href="https://carey.jhu.edu/about/"> About </a></li>
+								<li><a href="https://carey.jhu.edu/programs/"> Programs </a></li>
+								<li><a href="https://carey.jhu.edu/faculty-research/"> Faculty </a></li>
+								<li><a href="https://carey.jhu.edu/current-students/"> Students </a></li>
+								<li><a href="https://carey.jhu.edu/alumni-friends/"> Alumni </a></li>
+								<li><a href="https://carey.jhu.edu/employers/"> Employers </a></li>
+								
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+			<!-- head-pictures-->
+			<div id="head-pic">
+				<img id="head_img" src="images/05.jpg">
+				<div id="dots_div">
+					<li id="dot1" onmouseover="myChangePic(1)"></li>
+					<li id="dot2" onmouseover="myChangePic(2)"></li>
+					<li id="dot3" onmouseover="myChangePic(3)"></li>
+					<li id="dot4" onmouseover="myChangePic(4)"></li>
+				</div>
+			</div>
+			<!-- pictures move -->
+			<!-- <div id="pics">
+				<img src="images/01.png"/>
+			</div>
+			-->
+		</div>
+		
+		
+		
+		
+	<!--Movie introduction-->
+	<!--division heading-->
+	<br/>
+	<h3 class="bigtitleMovie">MOVIE LIST</h3>
+	
+	<!--division photo left-->
+	<div id="lego" class="divmarginMovie">
+		<div class="pictureMovie boxMovie">
+            <img src="images/lego.jpg" class="img-fluid" alt="lego" width="100%">
+  		</div>
+ 		<div class="textboxMovie boxMovie">
+     		<p class="titleMovie">The Lego Movie 2: The Second Part</p>
+        	<p class="textMovie">
+        		The much-anticipated sequel to the critically acclaimed, global box office phenomenon that started it all, "The LEGO Movie 2: The Second Part," reunites the heroes of Bricksburg in an all new action-packed adventure to save their beloved city. 
+        	</p>        
+        	<div class="divsmallMovie">
+          		<div class="margin1Movie">
+            		<h4>1HR 47MIN</h4>
+          		</div>
+          		<div class="margin2Movie">
+            		<h4>Starts at 9:30am in room 112</h4>
+          		</div>
+        	</div>
+        </div>    
+	</div>
+	
+	<!--division photo right-->
+	<div id="earth" class="divmarginMovie">
+ 		<div class="textboxMovie boxMovie">
+      		<p class="titleMovie">Wandering Earth</p>
+        	<p class="textMovie">
+        		Based on a short story by Liu Cixin. In the future, Earth's survival is threatened, so large thruster engines are built to propel the planet through the solar system toward another sun-like star.
+        	</p>    
+        	<div class="divsmallMovie">
+          		<div class="margin1Movie">
+            		<h4>2HR 55MIN</h4>
+          		</div>
+            	<div class="margin2Movie">
+            		<h4>Starts at 12:00pm in room 112</h4>
+            	</div>
+        	</div>               
+    	</div>
+		<div class="pictureMovie boxMovie">
+            <img src="images/wanderingearth.jpg" class="img-fluid" alt="lego" width="100%">
+        </div>            
+	</div>  
+	
+	<div id="peggi" class="divmarginMovie">
+  		<div class="pictureMovie boxMovie">
+      		<img src="images/peggi.jpg" class="img-fluid" alt="lego" width="100%">    
+  		</div>
+ 		<div class="textboxMovie boxMovie">
+ 	        <p class="titleMovie">Peppa Celebrates Chinese New Year</p>
+        	<p class="textMovie">
+				Tang Yuan and Jiao Zi live happily with their mom and dad. On the morning of Chinese New Year's eve, Tang Yuan and Jiao Zi were cheerful in planning to go to grandpa and grandma's home (dad's side) while surprised to see their parents were busy cleaning the house... 
+        	<div class="divsmallMovie">
+          		<div class="margin1Movie">
+            		<h4>1HR 21MIN</h4>
+          		</div>
+          		<div class="margin2Movie">
+            		<h4>Starts at 3:30pm in room 112</h4>
+          		</div>
+        	</div>
+  		</div>         
+	</div>
+
+	<div id="titanic" class="divmarginMovie">
+ 		<div class="textboxMovie boxMovie">
+      		<p class="titleMovie">Titanic (1997)</p>
+        	<p class="textMovie">     
+				James Cameron's "Titanic" is an epic, action-packed romance set against the ill-fated maiden voyage of the R.M.S. Titanic; the pride and joy of the White Star Line and, at the time, the largest moving object ever built. She was the most luxurious liner of her era -- the "ship of dreams" -- which ultimately carried over 1,500 people to their death in the ice cold waters of the North Atlantic in the early hours of April 15, 1912.
+        	</p>    
+        	<div class="divsmallMovie">
+          		<div class="margin1Movie">
+            		<h4>3HR 15MIN</h4>
+          		</div>
+         		<div class="margin2Movie">
+            		<h4>Starts at 5:30pm in room 112</h4>
+          		</div>
+        	</div>              
+  		</div> 
+  		<div class="pictureMovie boxMovie">
+            <img src="images/titanic.jpg" class="img-fluid" alt="lego" width="100%">
+  		</div>    
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!--subscribe-->
+	<section class="subscribe py-lg-4 py-md-3 py-sm-3 py-3">
+    	<div class="container py-lg-5 py-md-5 py-sm-4 py-4">
+			<h3 class="title clr text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3" style="font-size: 66px; color: white;" >Subscribe Us</h3>
+		 	<div class="row subscribe-form text-center">
+            	<div class="col-md-6 email-sub-agile">
+			  		<form action="#" method="post" name="emailsubmit">
+                  		<div class="form-group ">
+                     		<input name="emailinput" type="email" class="form-control email-sub-agile" placeholder="Email" style="height:30px;" size="40">
+                  		</div>
+                  		<div class="text-center">
+                     		<button type="submit" class="btn subscrib-btnn" onclick="suscribe()">Submit</button>
+                  		</div>
+				  	</form>
+               	</div>		
+			</div>
+		</div>		
+	</section >
+	<!--//subscribe-->
+	<!-- //Footer -->
+    <section class="buttom-footer py-lg-4 py-md-3 py-sm-3 py-3">
+    	<div class="container py-lg-5 py-md-5 py-sm-4 py-4" style="background-color:dark;">
+        	<div class="row footer-agile-grids text-center" style="background-color:dark;">
+               <div class="col-lg-4 col-md-4 col-sm-12 wthree-left-right" style="width:30%; float: left;">
+                  <h4 style="color:black;">About</h4>
+                  <div class="abt-footer">
+                     <p style="color:black;"> The movie festival is an valentine special event hold by the Movie Club. Movie Club is a platform under Carey Business School for movie lovers to meet and socialize. We are in both Baltimore and DC campus. </p>                    
+                  </div>				  
+               </div>
+               <div class="col-lg-4 col-md-4 col-sm-12 wthree-left-right" style="width:40%; float:left;">
+                  <h4 style="color:black;"> Movies Hour</h4>
+                  <div class="wls-hours-list">
+                     <ul>
+                        <li class="d-flex"> <a href="#lego"> The Lego Movie 2:The Second </a>  <span class="time ml-auto"> 9:30-11:17</span></li>
+                        <li class="d-flex"> <a href="#earth">Wandering Earth  </a><span class="time ml-auto"> 12:00-14:55</span></li>
+                        <li class="d-flex"><a href="#peggi">Peppa: Chinese New Year</a><span class="time ml-auto"> 15:30-16:51</span></li>
+                        <li class="d-flex"><a href="#titanic">Titanic (1997) </a><span class="time ml-auto"> 17:30-20:45</span></li>
+                        <!--<li class="d-flex">Friday   <span class="time ml-auto"> 9:30-22:30</span></li>
+                        <li class="d-flex">Saturday <span class="time ml-auto"> 9:30-23:30</span></li>
+                        <li class="d-flex">Sunday   <span class="time ml-auto">     closed</span></li>-->
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-4 col-sm-12 wthree-left-right" style="width:30%; float:left;">
+                  <h4 style="color:black;">Nav Links</h4>
+                  <nav class="border-line">
+                     <ul class="nav flex-column">
+                        <li class="nav-item active">
+                           <a class="nav-link" href="index.html" >Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                           <a href="tickets.html" class="nav-link ">TICKETS</a>
+                        </li>
+                        <li class="nav-item">
+                           <a href="index.html" class="nav-link">FOOD & DRINKs</a>
+                        </li>
+						<li class="nav-item">
+                           <a href="index.html" class="nav-link ">Blog</a>
+                        </li>
+                        <!--<li class="nav-item">
+                           <a href="index.html" class="nav-link">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                           <a href="index.html" class="nav-link">About</a>
+                        </li>
+                        -->
+                     </ul>
+                  </nav>
+               </div>
+            </div>
+         </div>
+      </section>
+	  
+      <footer style="margin:30% 0 0 0" class="text-center">
+         <p>©2019 Valentine Movie. All Rights Reserved 
+      </footer>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</body>
+
+
+
+</html>
